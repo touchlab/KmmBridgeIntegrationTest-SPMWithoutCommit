@@ -35,15 +35,6 @@ kotlin {
             }
         }
     }
-
-    cocoapods {
-        homepage = "https://www.example.com"
-        summary = "Test"
-        ios.deploymentTarget = "13"
-        framework {
-            isStatic = false
-        }
-    }
 }
 
 android {
@@ -56,8 +47,7 @@ android {
 
 kmmbridge {
     versionPrefix.set("1.3")
-    spm("../")
-    cocoapods("git@github.com:Touchlab/Podspecs.git")
+    spm(spmDirectory = "../", commitManually = true)
     gitTagVersions()
     mavenPublishArtifacts()
 }

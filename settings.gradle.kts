@@ -6,6 +6,6 @@ pluginManagement {
         mavenCentral()
     }
 }
-rootProject.name = "KmmBridgeIntegrationTest"
+rootProject.name = "KmmBridgeIntegrationTest-SPMWithoutCommit"
 include(":shared")
 
