@@ -13,4 +13,5 @@ xcuserdata/
 !/.idea/codeStyles/*
 !/.idea/inspectionProfiles/*
 .build
+!.build/KmmBridgeIntegrationTest-SPMWithoutCommit/ios-spm
 Package.resolved
