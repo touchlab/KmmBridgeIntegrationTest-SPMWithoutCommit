@@ -6,7 +6,7 @@ plugins {
     `maven-publish`
 }
 
-group = "co.touchlab"
+group = "co.touchlab.kmmbridge.test.spmmanualcommit"
 version = "1.0"
 
 repositories {
@@ -48,6 +48,8 @@ android {
 kmmbridge {
     versionPrefix.set("1.3")
     spm(spmDirectory = "../", commitManually = true)
+//    For now the ios target takes whatever is the newest published Package.swift and doesn't care about the version
+//    timestampVersions()
     gitTagVersions()
     mavenPublishArtifacts()
 }
