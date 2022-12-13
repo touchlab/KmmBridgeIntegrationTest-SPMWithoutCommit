@@ -46,7 +46,7 @@ android {
 }
 
 kmmbridge {
-    versionPrefix.set("1.3")
+    versionPrefix.set("1.5")
     spm(spmDirectory = "../", commitManually = true)
 //    For now the ios target takes whatever is the newest published Package.swift and doesn't care about the version
 //    timestampVersions()
