@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import shared
+import KmmBridgeIntergrationTestSPMWithoutCommit
 
 @main
 struct KmmBridgeIntegrationTestSpmApp: App {

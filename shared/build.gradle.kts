@@ -1,8 +1,10 @@
+import org.jetbrains.kotlin.gradle.plugin.mpp.Framework
+import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+
 plugins {
     kotlin("multiplatform") version "1.7.20"
-    kotlin("native.cocoapods") version "1.7.20"
     id("com.android.library") version "7.2.2"
-    id("co.touchlab.faktory.kmmbridge") version "999"
+    id("co.touchlab.faktory.kmmbridge") version "0.3.5"
     `maven-publish`
 }
 
@@ -17,10 +19,17 @@ repositories {
 
 kotlin {
     android()
-
     iosX64()
     iosArm64()
     iosSimulatorArm64()
+
+    targets.withType<KotlinNativeTarget> {
+        binaries {
+            framework("KmmBridgeIntegrationTestSPMManualCommit") {
+                isStatic = true
+            }
+        }
+    }
 
     sourceSets {
         val commonMain by getting
